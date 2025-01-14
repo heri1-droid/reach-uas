@@ -13,9 +13,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': '/src',  // menambahkan alias untuk path yang lebih mudah
-    },
-  },
+  build: {
+    rollupOptions: {
+      external: ['axios'] // Menambahkan axios ke daftar external agar tidak dibundel
+    }
+  }
 })
