@@ -15,7 +15,7 @@ export default function Login() {
     e.preventDefault(); // Mencegah form melakukan submit secara default yang akan me-refresh halaman
 
     axios
-      .post("http://127.0.0.1:8000/api/login", {
+      .post("https://rsiarrasyid.com/api/login", {
         // Melakukan request POST ke API login
         email, // Mengirimkan email yang telah dimasukkan pengguna
         password, // Mengirimkan password yang telah dimasukkan pengguna
